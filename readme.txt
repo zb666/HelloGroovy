@@ -33,3 +33,48 @@ DataStructureStudy
 
 GroovyRange 范围
 
+----------------------------------
+面向对象
+Trait类型
+类似空适配器的模式
+比如动画 我们需要的是其中的一个方法，但是我们只需要关心我们需要的方法即可，
+这样的话就只需要关心我们需要的方法即可.
+
+Groovy元编程
+
+
+Groovy运行时期的各种方法
+在错误的时候就会尝试调用这些方法
+
+invokeMethod() 方法，当我们找不到方法的时候就可以调用这个方法
+methodMissing()->invokeMethod()
+
+为类动态的添加一个属性
+metaClass 运行时期添加一般的属性，方法或者是静态的方法或者属性
+ADV: 扩展第三方库的方法，达到变相添加的功能,那么通过metaClass就可以动态的注入方法或者属性
+
+//通过闭包添加静态方法
+Person.metaClass.static.createPerson = {
+    String name,int age ->new Person(name:name,age:age)
+}
+
+def ppp = Person.createPerson("xxx",222)
+println ppp.name + ppp.age
+
+!那么来源是哪里呢，是顶层的接口，GroovyObejct
+
+我们通过setMetaClass或者setProperty方法进行方法或者属性的添加
+
+public interface GroovyObject {
+    Object invokeMethod(String var1, Object var2);
+
+    Object getProperty(String var1);
+
+    void setProperty(String var1, Object var2);
+
+    MetaClass getMetaClass();
+
+    void setMetaClass(MetaClass var1);
+}
+
+
