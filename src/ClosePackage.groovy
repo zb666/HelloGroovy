@@ -3,13 +3,15 @@
 
 //参数->闭包体
 //
-def closer = { String name, int age -> return "hello groovy ${name}" }
+def closer = { String name, int age -> return "hello groovy ${name} ${age}" }
 //closer.call()
 def name = 'groovy!'
 def a = 4
 //闭包中的返回值
 def result = closer(name, a)
 println(result)
+//闭包的参数和返回值
+closer.call("close",111)
 
 int fab(int number) {
     int result = 1

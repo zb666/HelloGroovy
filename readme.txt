@@ -25,9 +25,11 @@ GroovyDelegate
 
 //DataStructureStudy 列表学习
 groovy 列表轻易
-主要讲述的是闭包结合当前的List集合 进行一系列诸如
+主要讲述的是闭包结合当前的List集合 进 行一系列诸如
 查找，查找集合等操作
 
 DataStructureStudy
 //数据结构  1.列表 2.映射 3.范围
+
+GroovyRange 范围
 
