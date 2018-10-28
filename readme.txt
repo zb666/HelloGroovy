@@ -77,4 +77,10 @@ public interface GroovyObject {
     void setMetaClass(MetaClass var1);
 }
 
+但是!!! 这种注入是一次性的注入的，不是全局的Global注入.
+查看PersonManager 完成了该类的方法的注入
+
+整体语法总结
+变量，字符串，数据结构
+
 
