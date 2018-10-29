@@ -39,10 +39,15 @@ println str.every {str.isNumber()}
 def strClose = str.collect{
     it.toUpperCase()
 }
+
 strClose.get(0)
 
+//任意的闭包都会有一个隐藏的参数
+def clouser = {println "Hello Groovy Clouser ${it}"}
+clouser("zb666")
 
-
+def clou = {String sss,int age->println "hello:${name},age:${age}"}
+clou("sss",24)
 
 
 

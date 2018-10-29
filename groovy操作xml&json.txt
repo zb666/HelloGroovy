@@ -83,14 +83,4 @@ public interface GroovyObject {
 整体语法总结
 变量，字符串，数据结构
 
-//闭包是一定有返回值的
-这是无参数的情况 def clouser = { println "HelloGroovy" }
-这是有参数的情况 def clouser = {String name,int age -> println xxxxx}
 
-
-Initialization初始化阶段
-（解析整个工程中所有的Project)，构建所有的Project对应的project对象
-Configuration
-(解析所有projects对象中的task)构建好所有task的拓扑图
-Execution执行阶段
-执行task及其所依赖的task
