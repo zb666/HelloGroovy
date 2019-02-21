@@ -18,5 +18,5 @@ colors.yellow = 'fffffff'
 colors.leftShift([yellow:'0xff00'])
 colors.complex = [a:1,b:2]
 println colors.toMapString()
-
 println colors.getClass()
+

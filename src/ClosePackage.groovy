@@ -2,7 +2,6 @@
 //1.闭包概念 2.闭包参数 3.闭包返回值
 
 //参数->闭包体
-//
 def closer = { String name, int age -> return "hello groovy ${name} ${age}" }
 //closer.call()
 def name = 'groovy!'
@@ -43,11 +42,17 @@ def strClose = str.collect{
 strClose.get(0)
 
 //任意的闭包都会有一个隐藏的参数
-def clouser = {println "Hello Groovy Clouser ${it}"}
+def clouser = {
+    println "Hello Groovy Clouser ${it}"
+}
+
 clouser("zb666")
 
 def clou = {String sss,int age->println "hello:${name},age:${age}"}
 clou("sss",24)
 
+task demo{
+    println("demo task")
+}
 
 
